@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bayesian framework for solving transform invariant low-rank textures!"
+title:  "Bayesian framework for solving transform invariant low-rank textures"
 date:   2017-12-17 14:55:24 +0800
 categories: jekyll update
 ---
