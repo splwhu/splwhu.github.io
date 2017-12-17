@@ -4,12 +4,12 @@ title:  "Bayesian framework for solving transform invariant low-rank textures"
 date:   2017-12-17 14:55:24 +0800
 categories: jekyll update
 ---
-**Bayesian framework for solving transform invariant low-rank textures**
+##Bayesian framework for solving transform invariant low-rank textures##
 ===
-**Abstract:**
+##Abstract:##
 Our method is based on the application of Bayesian framework in robust principal component analysis (RPCA), besides less local minima, nonparametric Bayesian method introduces the uncertainty in the parameters, which make our new algorithm can handle more complex situations. Experimental results on both synthetic and real data indicate that our new algorithm outperforms the existing algorithm especially for the case with corruptions and occlusions.
 
-**Keywords:**Image feature, transform invariant low-rank textures, rectification, Bayesian framework, corruptions and occlusions
+##Keywords:##Image feature, transform invariant low-rank textures, rectification, Bayesian framework, corruptions and occlusions
 
 ## 1.Introduction ##
 In this paper, based on the application of Bayesian framework in robust principal component analysis (RPCA) , we propose to build a hierarchical Bayesian model to TILT and then variational methods is implemented for Bayesian inference. Theoretically speaking, it has been proved that Bayesian approach to sparsity (or low-rank) problems has fewer local minimizations. Moreover, the aforementioned optimization algorithms need to set the trade-off parameter in advance, which is not known a priori. What's worse, single fixed values will lose uncertainty in the parameter, which induces uncertainty in predictions.
