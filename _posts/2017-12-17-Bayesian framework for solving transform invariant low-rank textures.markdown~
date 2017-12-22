@@ -22,7 +22,7 @@ While nonparametric Bayesian approach treats all parameters as probability distr
 ## 2.Experiments ##
  The impure low-rank component leads to a result that TILT method can not converge to a lower-rank solution, then obtains a relatively wrong transformation.
 
-![](https://github.com/yuanqw/yuanqw.github.io/blob/master/image/2.png?raw=true)
+![](https://i.imgur.com/7W2hoYC.png)
 
 **Authors:**
 
