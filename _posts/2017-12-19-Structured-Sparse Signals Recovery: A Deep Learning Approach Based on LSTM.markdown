@@ -14,9 +14,9 @@ categories: jekyll update
 Compressive sensing nowadays is one of the hottest research topics in signal processing field, which also plays a significant role in signal sampling and recovering. 
 
 In the conventional sense, only sparse prior on the property of signals is adopted to guarantee the exact recovery. In the general CS framework, the canonical form of CS could be written as follows:
-$$
+\[
 \mathbf{y} = \mathbf{Ax} + \mathbf{e}
-$$
+\]
 
 where \\(\mathbf{y}\in \mathcal{R}^{M}\\) is the measurement matrix, \\(\mathbf{A}\in \mathcal{R}^{M\times N}\\) is a random sensing matrix with \\(M\ll N\\) satisfying the so-called [RIP](https://www.sciencedirect.com/science/article/pii/S1631073X08000964), \\(\mathbf{x}\in \mathcal{R}^{N}\\) is the original sparse signal needed to be recovered with no more than \\(K\\)\\((K<M)\\) nonzero elements and \\(\mathbf{e}\\) is the error term consists of the possible noise and perturbations.
 
@@ -49,7 +49,7 @@ In this paper, we adopt the framework of the greedy algorithm -- [OMP](http://ci
 * select  the maxinum probability in these probabilities and employ its corresponding index as the position of a certain nonzero element; 
 * estimate the value of this nonzero element via solving the following least square (LS) problem: 
 $$
-\hat{\mathbf{x}} = \arg\min_{\mathbf{x}}|| \mathbf{y}-\mathbf{A}^{\Omega} \mathbf{x}||\_2^2
+\hat{\mathbf{x}} = \arg\min_{\mathbf{x}}|| \mathbf{y}-\mathbf{A}^{\Omega} \mathbf{x}||_2^2
 $$
 
 
@@ -72,9 +72,9 @@ this new residual will serve as the input to the LSTM in the next iteration. Of 
 
 Now we state concrete steps for generating training samples: (1) randomly give a structured-sparse signal \\(\mathbf{x}\\) with \\(K\\) nonzero elements and calculate \\(\mathbf{y}\\) using **(1)**; (2) find the element that has the maximum value in \\(\mathbf{x}\\) and set it to zero, then assume that the index of this element is \\({p\_0}\\), thus we get a new structured-sparse signal with \\(K-1\\) nonzero elements; (3) calculate the residual vector by
 $$
-\mathbf{r}=\mathbf{y}-\mathbf{a}_{p\_0}x(p\_0)
+\mathbf{r}=\mathbf{y}-\mathbf{a}_{p_0}x(p_0)
 $$
-where \\(\mathbf{a}\_{p\_0}\\) is the \\(p\_0\\)-th column of the sensing matrix \\(\mathbf{A}\\) and \\(x(p\_0)\\) is the \\(p\_0\\)-th element of \\(\mathbf{x}\\). Notably, the generation of the residual vector is because of not having the other \\(K-1\\) nonzero elements of \\(\mathbf{x}\\), in which the second largest value in these \\(K-1\\) nonzero elements principally contributes to the residual vector \\(\mathbf{r}\\) in **(4)**; (4) assume that the index of the second largest value of \\(\mathbf{x}\\) is \\(p\_1\\), then define a one-hot vector \\(\mathbf{h}\\) at \\(p\_1\\)-th entry. Finally, a training sample pair \\((\mathbf{r},\mathbf{h})\\) is obtained. Next, we set the second largest value of \\(\mathbf{x}\\) to zero and repeat the above procedures until the vector \\(\mathbf{x}\\) does not have any nonzero element. 
+where \\(\mathbf{a}_{p_0}\\) is the \\(p_0\\)-th column of the sensing matrix \\(\mathbf{A}\\) and \\(x(p_0)\\) is the \\(p_0\\)-th element of \\(\mathbf{x}\\). Notably, the generation of the residual vector is because of not having the other \\(K-1\\) nonzero elements of \\(\mathbf{x}\\), in which the second largest value in these \\(K-1\\) nonzero elements principally contributes to the residual vector \\(\mathbf{r}\\) in **(4)**; (4) assume that the index of the second largest value of \\(\mathbf{x}\\) is \\(p_1\\), then define a one-hot vector \\(\mathbf{h}\\) at \\(p_1\\)-th entry. Finally, a training sample pair \\((\mathbf{r},\mathbf{h})\\) is obtained. Next, we set the second largest value of \\(\mathbf{x}\\) to zero and repeat the above procedures until the vector \\(\mathbf{x}\\) does not have any nonzero element. 
 
 ### Training Regimes
 
