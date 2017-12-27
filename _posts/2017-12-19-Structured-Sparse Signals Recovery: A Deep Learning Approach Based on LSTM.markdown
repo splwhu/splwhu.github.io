@@ -5,18 +5,20 @@ date:   2017-12-19 14:55:24 +0800
 categories: jekyll update
 ---
 
-## Structured-Sparse Signals Recovery:                  A Deep Learning Approach Based on LSTM ##
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
-
+Structured-Sparse Signals Recovery: A Deep Learning Approach Based on LSTM
 
 ### Introduction
 
 Compressive sensing nowadays is one of the hottest research topics in signal processing field, which also plays a significant role in signal sampling and recovering. 
 
 In the conventional sense, only sparse prior on the property of signals is adopted to guarantee the exact recovery. In the general CS framework, the canonical form of CS could be written as follows:
-\[
+$$
 \mathbf{y} = \mathbf{Ax} + \mathbf{e}
-\]
+$$
 
 where \\(\mathbf{y}\in \mathcal{R}^{M}\\) is the measurement matrix, \\(\mathbf{A}\in \mathcal{R}^{M\times N}\\) is a random sensing matrix with \\(M\ll N\\) satisfying the so-called [RIP](https://www.sciencedirect.com/science/article/pii/S1631073X08000964), \\(\mathbf{x}\in \mathcal{R}^{N}\\) is the original sparse signal needed to be recovered with no more than \\(K\\)\\((K<M)\\) nonzero elements and \\(\mathbf{e}\\) is the error term consists of the possible noise and perturbations.
 
@@ -136,6 +138,5 @@ As for uniform-sparse signals, whose interval of two adjacent nonzero elements i
 
 In this paper, a novel data-driven method based on recurrent neural networks was developed, which could flexibly cope with the structured-sparse signals recovery problem with any structure patterns. Particularly, the long short-term memory was introduced to the proposed algorithm for precisely capturing the correlations and dependencies among nonzero elements of sparse signals. Unlike some other conventional approaches that rely on the certain priori knowledge, SSSR-LSTM is prior-free, which is the reason why our proposed algorithm has the robust ability to explore and exploit intra-structure correlation with any structure patterns. Extensive experiments on three typical structured-sparse signals show that our proposed algorithm achieves a significant performance improvement as compared with the conventional approaches under any experiment settings. It also demonstrates the superiority of our proposed algorithm over other existing state-of-the-art methods.
 
-<script type="text/javascript"
-   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+
+
